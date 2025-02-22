@@ -1,10 +1,13 @@
 import React from 'react'
+import Header from './components/header'
+import CardContainer from './components/card-container'
 
 function App() {
 
   return (
     <React.Fragment>
-      <h1>Hello World</h1>
+      <Header/>
+      <CardContainer/>
     </React.Fragment>
   )
 }

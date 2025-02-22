@@ -1,0 +1,23 @@
+.containerInfo {
+    display: flex;
+    flex-direction: column;
+}
+.label {
+    font-size: 24px;
+    font-weight: 700;
+}
+.number {
+    font-size: 14px;
+    color: gray;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 30px;
+    border-radius: 12px;
+    -webkit-box-shadow: 7px 4px 23px 0px rgba(186,186,186,1);
+-moz-box-shadow: 7px 4px 23px 0px rgba(186,186,186,1);
+box-shadow: 7px 4px 23px 0px rgba(186,186,186,1);
+}
