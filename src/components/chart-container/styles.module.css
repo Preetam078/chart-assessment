@@ -1,0 +1,21 @@
+.upperContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: 50px;
+}
+.lowerContainer {
+    margin-top:100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+}
+
+@media screen and (max-width: 1035px) {
+    .upperContainer {
+        grid-template-columns: 1fr;
+    }
+    .lowerContainer {
+        grid-template-columns: 1fr;
+        row-gap: 100px;
+    }
+}

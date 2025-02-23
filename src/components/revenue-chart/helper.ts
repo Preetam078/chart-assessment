@@ -42,8 +42,6 @@ export const selectOptions = [
     {
         type: "period",
         selectOptions: [
-            { value: "", label: "All" },
-            // Monthly options
             { value: revenueSubFilter.JANUARY, label: "January" },
             { value: revenueSubFilter.FEBRUARY, label: "February" },
             { value: revenueSubFilter.MARCH, label: "March" },

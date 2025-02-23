@@ -109,6 +109,7 @@ const RevenueChart: React.FC = () => {
 
     return (
         <div className={styles.container}>
+            <h3>Revenue Metrics</h3>
             <div className={styles.selector__container}>
                 {renderSelects}
             </div>

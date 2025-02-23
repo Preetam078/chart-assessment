@@ -55,6 +55,7 @@ const UserChart: React.FC = () => {
     return (
         <React.Fragment>
             <div className={styles.container}>
+                <h3>User Growth Metrics</h3>
             <div className={styles.selector__container}>
                 {
                     selectOptions && selectOptions.map((currentOption) => {

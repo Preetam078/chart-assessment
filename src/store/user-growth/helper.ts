@@ -25,19 +25,19 @@ export const userGrowthHelper = {
        
        switch(userType) {
         case userGrowthVariant.ACTIVE_USER:
-            includedMonths.forEach((currentMonth) => {
-                newUserData.activeUsers[currentMonth] = activeUsers[currentMonth];
+            includedMonths.forEach((currentMonth) => {;
+                (newUserData.activeUsers as {[key: string]: number})[currentMonth] = (activeUsers as {[key: string]: number})[currentMonth];
             });
             break;
         case userGrowthVariant.TOTAL_USER:
             includedMonths.forEach((currentMonth) => {
-                newUserData.totalUsers[currentMonth] = users[currentMonth];
+                (newUserData.totalUsers as { [key: string]: number })[currentMonth] = (users as { [key: string]: number })[currentMonth];
             });
             break;
         default:
             includedMonths.forEach((currentMonth) => {
-                newUserData.activeUsers[currentMonth] = activeUsers[currentMonth];
-                newUserData.totalUsers[currentMonth] = users[currentMonth];
+                (newUserData.activeUsers as {[key: string]: number})[currentMonth] = (activeUsers as {[key: string]: number})[currentMonth];
+                (newUserData.totalUsers as { [key: string]: number })[currentMonth] = (users as { [key: string]: number })[currentMonth];
             });
        }
 

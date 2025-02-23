@@ -36,3 +36,14 @@ export const revenueSubFilter = {
     NOVEMBER: "november",
     DECEMBER: "december"
 };
+
+export const topArtistFilter = {
+    THIRTY_DAYS: 30,
+    TEN_DAYS: 10,
+    SEVEN_DAYS: 7
+}
+
+export const topArtistFilterCount = {
+    TEN: 10,
+    FIVE: 5
+}

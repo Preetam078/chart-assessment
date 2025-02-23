@@ -1,11 +1,4 @@
-.selector__container {
-    display: flex;
-    grid-template-columns: repeat(1, 1fr);
-    column-gap: 30px;
-    margin-bottom: 20px;
-}
 .container {
-    margin-top: 100px;
     padding: 10px 30px;
     border-radius: 12px;
     -webkit-box-shadow: 7px 4px 23px 0px rgba(186,186,186,1);
