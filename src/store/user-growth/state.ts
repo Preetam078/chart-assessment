@@ -2,8 +2,8 @@ import { IUserGrowth } from "./types";
 
 export const INITIAL_STATE:IUserGrowth = {
     users:{
-        totalUsers: {},
-        activeUsers: {}
+        totalUsers: {} as Record<string, number>,
+        activeUsers: {} as Record<string, number>
     },
     
 }

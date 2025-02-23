@@ -4,8 +4,8 @@ export interface IUserData {
 
 export interface IUserGrowth {
     users: {
-        totalUsers: number; // IUserData is an object
-        activeUsers: number;
+        totalUsers: any;
+        activeUsers: any;
     };
 }
 
