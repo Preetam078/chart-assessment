@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Bar } from 'react-chartjs-2';
 import {
     Chart as ChartJS,
@@ -10,7 +10,7 @@ import {
     Legend,
 } from 'chart.js';
 import { topArtistFilter, topArtistFilterCount} from '../../constants/filter-constants';
-import { daysOptions, getBarChartConfig, selectOptions, selectorConfig } from './helper';
+import {  getBarChartConfig, selectorConfig } from './helper';
 import styles from './styles.module.css';
 import useTopStreamStore from '../../store/most-streamed-song';
 import Select from 'react-select';

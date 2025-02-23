@@ -1,4 +1,4 @@
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@material-ui/core';
+import { Table, TableBody, TableCell, TableContainer ,TableHead, TableRow, Paper  } from '@mui/material';
 import { recentStreams } from '../../data';
 import styles from './styles.module.css'
 
