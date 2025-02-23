@@ -1,14 +1,55 @@
+// Helper function to generate random number within a range
+const randomInRange = (min: number, max: number) =>
+  Math.floor(Math.random() * (max - min + 1)) + min;
+
+// Generate dynamic data with seasonal trends
 export const revenue = {
-    "January": { subscriptions: 40000, advertisements: 12000 },
-    "February": { subscriptions: 37000, advertisements: 11000 },
-    "March": { subscriptions: 43000, advertisements: 12000 },
-    "April": { subscriptions: 47000, advertisements: 13000 },
-    "May": { subscriptions: 51000, advertisements: 14000 },
-    "June": { subscriptions: 57000, advertisements: 15000 },
-    "July": { subscriptions: 64000, advertisements: 16000 },
-    "August": { subscriptions: 62000, advertisements: 16000 },
-    "September": { subscriptions: 59000, advertisements: 15000 },
-    "October": { subscriptions: 55000, advertisements: 13000 },
-    "November": { subscriptions: 50000, advertisements: 12000 },
-    "December": { subscriptions: 46000, advertisements: 11000 }
+  January: {
+    subscriptions: randomInRange(35000, 4500),
+    advertisements: randomInRange(1000, 14000),
+  },
+  February: {
+    subscriptions: randomInRange(37000, 4700),
+    advertisements: randomInRange(1000, 15000),
+  },
+  March: {
+    subscriptions: randomInRange(40000, 5000),
+    advertisements: randomInRange(1200, 16000),
+  },
+  April: {
+    subscriptions: randomInRange(42000, 5200),
+    advertisements: randomInRange(1300, 17000),
+  },
+  May: {
+    subscriptions: randomInRange(45000, 5000),
+    advertisements: randomInRange(4000, 18000),
+  },
+  June: {
+    subscriptions: randomInRange(50000, 6000),
+    advertisements: randomInRange(1000, 19000),
+  },
+  July: {
+    subscriptions: randomInRange(55000, 6500),
+    advertisements: randomInRange(1600, 20000),
+  },
+  August: {
+    subscriptions: randomInRange(53000, 3000),
+    advertisements: randomInRange(1000, 19000),
+  },
+  September: {
+    subscriptions: randomInRange(50000, 6000),
+    advertisements: randomInRange(1400, 18000),
+  },
+  October: {
+    subscriptions: randomInRange(4500, 5000),
+    advertisements: randomInRange(1000, 17000),
+  },
+  November: {
+    subscriptions: randomInRange(4000, 50000),
+    advertisements: randomInRange(12000, 6000),
+  },
+  December: {
+    subscriptions: randomInRange(3800, 48000),
+    advertisements: randomInRange(11000, 5000),
+  },
 };

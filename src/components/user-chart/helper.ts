@@ -1,9 +1,13 @@
 import { ChartData, ChartOptions } from "chart.js";
 import { userGrowthConstant, userGrowthVariant } from "../../constants/filter-constants";
 
-export const getLineChartConfig = (users:any) => {
+interface UserData {
+    activeUsers: Record<string, number>;
+    totalUsers: Record<string, number>;
+}
 
-    const { activeUsers = {}, totalUsers = {} } = users || {};
+export const getLineChartConfig = (users: UserData = { activeUsers: {}, totalUsers: {} }) => {
+    const { activeUsers = {}, totalUsers = {} } = users;
     // Extracting labels and values
 
     const labels = Object.keys(activeUsers).length > 0 ? Object.keys(activeUsers) :  Object.keys(totalUsers);

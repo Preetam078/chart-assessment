@@ -11,12 +11,17 @@ import {
     PointElement,
 } from "chart.js";
 import useUserGrowthChartStore from "../../store/user-growth";
-import { getLineChartConfig, selectOptions, timeOption, userOption } from "./helper";
+import { getLineChartConfig, selectOptions } from "./helper";
 import Select from 'react-select';
 import { userGrowthConstant } from "../../constants/filter-constants";
 
 // Register required Chart.js components
 ChartJS.register(LineElement, CategoryScale, LinearScale, Tooltip, Legend, PointElement);
+
+interface SelectOption {
+    value: string;
+    label: string;
+}
 
 const UserChart: React.FC = () => {
     const { users, getUserGrowthData } = useUserGrowthChartStore();
@@ -31,13 +36,7 @@ const UserChart: React.FC = () => {
 
     const { data, options } = getLineChartConfig(users || {});
 
-    const colourOptions = [
-        { value: 'chocolate', label: 'Chocolate' },
-        { value: 'strawberry', label: 'Strawberry' },
-        { value: 'vanilla', label: 'Vanilla' }
-    ];
-
-    const handleTimeChange = (selectedOption: any) => {
+    const handleTimeChange = (selectedOption: SelectOption | null) => {
         const { value = "" } = (selectedOption || {})
         setCurrentFilter(prev => ({
             ...prev,
@@ -45,7 +44,7 @@ const UserChart: React.FC = () => {
         }))
     }
 
-    const handleUserChange = (selectedOption: any) => {
+    const handleUserChange = (selectedOption: SelectOption | null) => {
         const { value = "" } = (selectedOption || {})
         setCurrentFilter(prev => ({
             ...prev,
@@ -55,6 +54,7 @@ const UserChart: React.FC = () => {
 
     return (
         <React.Fragment>
+            <div className={styles.container}>
             <div className={styles.selector__container}>
                 {
                     selectOptions && selectOptions.map((currentOption) => {
@@ -72,6 +72,7 @@ const UserChart: React.FC = () => {
                 }
             </div>
             <Line data={data} options={options} />
+            </div>
         </React.Fragment>
     );
 };
