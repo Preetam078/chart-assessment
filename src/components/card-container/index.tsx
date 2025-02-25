@@ -32,6 +32,8 @@ export default function CardContainer() {
                     metricCardDataV2 && metricCardDataV2.map((item, index) => (
                         <MetricCardV2
                             key={index}
+                            heading={item.heading}
+                            isRevenue={item.isRevenue}
                             value1={item.value1}
                             value2={item.value2}
                             label1={item.label1}

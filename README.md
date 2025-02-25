@@ -1,51 +1,44 @@
-# React + TypeScript + Vite
+## Running the Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+To run the application, follow these steps:
 
-Currently, two official plugins are available:
+1. Install dependencies:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+  using npm
+  
+   ```bash
+   npm install
+   ```
 
-## Expanding the ESLint configuration
+   using yarn
+   ```bash
+   yarn add
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Start the development server:
 
-- Configure the top-level `parserOptions` property like this:
+   ```bash
+   npm run dev
+   ```
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+3. Open your browser and navigate to `http://localhost:5173/` to see the application running.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Data Visualization
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- **Chart & Bar Graph**: We used [chartJS](https://www.chartjs.org/) for data visualization in this project. ChartJS is a composable charting library built on React components.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# chart-assessment
+- **Table Data**: We used [MaterialUI](https://mui.com/material-ui/react-table/) for tabular data presentation.
+- **Select Component**: we use [React Select](https://react-select.com/) for selection component in the data filteration part.
+
+## State Management
+
+- **State Management**: We use [Zustand](https://zustand-demo.pmnd.rs/) for state management to handle complex state logic.
+
+## Additional Feature 
+
+- Modular Design Pattern
+- Modular Store Management(Slice pattern)
+- Vite + Typescript
+- Added features like (sorting, searching) in table data.
+- Filtering the visualizing data
+- Added Lazy load component for the all the Chart and Table component

@@ -25,6 +25,8 @@ export const metricCardConfig = (totalUser: number, topArtist: ITopArtist, reven
         ],
         metricCardDataV2: [
             {
+                heading: "Artist Performance",
+                isRevenue: false,
                 value1: topArtist.streams,
                 label1: "Streams",
                 label2: "Top Artist",
@@ -32,9 +34,11 @@ export const metricCardConfig = (totalUser: number, topArtist: ITopArtist, reven
                 Icon: MdHeadsetMic
             },
             {
-                value1: revenue.advertisements,
+                heading: "Revenue",
+                isRevenue: true,
+                value1: `${revenue.advertisements}`,
                 label1: "Advertisements",
-                value2: revenue.subscriptions,
+                value2: `${revenue.subscriptions}`,
                 label2: "Subscriptions",
                 Icon: FaMoneyBillAlt
             },
